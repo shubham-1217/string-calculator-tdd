@@ -16,6 +16,12 @@ class StringCalculator {
   var normalizedNumbers = numbersToProcess.replaceAll('\n', delimiter);
   var numberList = normalizedNumbers.split(delimiter);
   
+  // Check for negative numbers
+  var negatives = numberList.where((numStr) => numStr.startsWith('-')).toList();
+  if (negatives.isNotEmpty) {
+    throw FormatException('negative numbers not allowed ${negatives.join(',')}');
+  }
+  
   return numberList.map(int.parse).reduce((sum, number) => sum + number);
   }
 }

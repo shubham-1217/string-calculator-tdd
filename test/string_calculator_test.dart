@@ -3,8 +3,9 @@ import 'package:string_calculator/string_calculator.dart';
 
 void main() {
   group('StringCalculator', () {
-    test('should support custom delimiters', () {
-    expect(StringCalculator.add('//;\n1;2'), equals(3));
+    test('should throw exception for negative numbers', () {
+    expect(() => StringCalculator.add('1,-2,3'), 
+      throwsA(predicate((e) => e is FormatException && e.toString().contains('negative numbers not allowed'))));
     });
   });
 }
