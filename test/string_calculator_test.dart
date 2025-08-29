@@ -3,8 +3,8 @@ import 'package:string_calculator/string_calculator.dart';
 
 void main() {
   group('StringCalculator', () {
-    test('should handle any amount of numbers', () {
-    expect(StringCalculator.add('1,2,3,4,5'), equals(15));
+    test('should handle new lines between numbers', () {
+    expect(StringCalculator.add('1\n2,3'), equals(6));
     });
   });
 }
