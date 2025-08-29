@@ -3,8 +3,8 @@ import 'package:string_calculator/string_calculator.dart';
 
 void main() {
   group('StringCalculator', () {
-    test('should return the number itself for single number', () {
-    expect(StringCalculator.add('1'), equals(1));
+    test('should return sum of two comma-separated numbers', () {
+    expect(StringCalculator.add('1,5'), equals(6));
     });
   });
 }
