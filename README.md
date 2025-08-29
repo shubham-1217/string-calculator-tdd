@@ -31,6 +31,6 @@ This project was developed following the red-green-refactor cycle:
 ## Installation
 
 ```bash
-git clone https://github.com/your-username/string-calculator-tdd.git
+git clone https://github.com/shubham-1217/string-calculator-tdd.git
 cd string-calculator-tdd
 dart pub get
